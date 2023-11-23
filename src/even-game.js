@@ -14,7 +14,11 @@ const answerToBool = (answer) => {
 };
 
 const brainEven = () => {
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
+
   const questionsCount = 3;
   for (let i = 0; i < questionsCount; i += 1) {
     const questionInt = getRandomInt();
@@ -27,11 +31,11 @@ const brainEven = () => {
     if (questionIntEven === answerToBool(answer)) {
       console.log('Correct!');
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct}'.\nLet's try again, Bill!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correct}'.\nLet's try again, ${name}!`);
       return;
     }
   }
-  console.log('Congratulations');
+  console.log(`Congratulations, ${name}!`);
 };
 
-brainEven();
+export default brainEven;
