@@ -1,7 +1,7 @@
 import readlineSync from 'readline-sync';
-import { getRandomInt } from './tools/tools.js';
+import getRandomInt from './tools/tools.js';
 
-//const getRandomInt = (max = 99) => Math.floor(Math.random() * max);
+// const getRandomInt = (max = 99) => Math.floor(Math.random() * max);
 
 const answerToBool = (answer) => {
   switch (answer) {

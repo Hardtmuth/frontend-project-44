@@ -1,4 +1,6 @@
-const startGame = (gameRules, gameQuestion) => {
+import readlineSync from 'readline-sync';
+
+const startGame = (gameRules, game) => {
   console.log('Welcome to the Brain Games!');
   const name = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${name}!`);
@@ -7,17 +9,19 @@ const startGame = (gameRules, gameQuestion) => {
 
   const questionsCount = 3; // Количество вопросов в игре
   for (let i = 0; i < questionsCount; i += 1) {
-    // Вопрос из игры
+    const [gameQuestion, correctAnswer] = game();
+    console.log(gameQuestion); // Вопрос из игры
     const answer = readlineSync.question('Your answer: '); // Запрос ответа у пользователя
 
     // Проверка ответа пользователя с верным ответом
-    if (true) {
+    if (answer === correctAnswer.toString()) {
       console.log('Correct!'); // Сообщение при правильном ответе
     } else {
-      console.log(`'${answer}' is wrong answer ;(. Correct answer was 
-      '${correct}'.\nLet's try again, ${name}!`);
+      console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${name}!`);
       return; // Сообщение при неправльном ответе и выход из игры
     }
   }
   console.log(`Congratulations, ${name}!`); // Сообщение при успешном прохождении игры
-}
+};
+
+export default startGame;
