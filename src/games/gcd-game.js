@@ -1,8 +1,11 @@
 import getRandomInt from './tools/tools.js';
 
 const getRightAnswer = (leftOperand, rightOperand) => {
-  const result = leftOperand / rightOperand; // TODO do the game logic
-  return result;
+  if (!rightOperand) {
+    return leftOperand;
+  }
+
+  return getRightAnswer(rightOperand, leftOperand % rightOperand);
 };
 
 const ruleMessage = 'Find the greatest common divisor of given numbers.';
