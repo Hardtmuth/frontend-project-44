@@ -19,7 +19,7 @@ const brainProgression = () => {
   const rightAnswer = progression[replaceIndex];
 
   progression[replaceIndex] = '..';
-  const question = progression.join(' ');
+  const question = `Question: ${progression.join(' ')}`;
 
   return [question, rightAnswer];
 };

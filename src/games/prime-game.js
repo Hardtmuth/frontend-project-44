@@ -11,9 +11,10 @@ const isPrime = (int) => {
 
 const brainPrime = () => {
   const questionInt = getRandomInt(2, 160);
+  const question = `Question: ${questionInt}`;
   const rightAnswer = isPrime(questionInt) ? 'yes' : 'no';
 
-  return [questionInt, rightAnswer];
+  return [question, rightAnswer];
 };
 
 export { ruleMessage, brainPrime };
