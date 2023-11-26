@@ -10,4 +10,4 @@
 [![asciicast](https://asciinema.org/a/623107.svg)](https://asciinema.org/a/623107)
 
 ### Example "brain-gcd" game.
-[![asciicast](https://asciinema.org/a/Gcx3RywLeoulxGl1xrZ865vrq.svg)](https://asciinema.org/a/Gcx3RywLeoulxGl1xrZ865vrq)
+[![asciicast](https://asciinema.org/a/623312.svg)](https://asciinema.org/a/623312)
